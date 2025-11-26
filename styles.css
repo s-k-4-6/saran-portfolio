@@ -18,10 +18,7 @@ body.light-theme {
   color: #000;
 }
 
-body.light-theme nav a {
-  color: #fff;
-}
-
+/* HEADER */
 header {
   background: #111;
   padding: 1rem;
@@ -44,7 +41,6 @@ nav ul {
   gap: 1rem;
 }
 
- 
 nav a {
   color: inherit;
   text-decoration: none;
@@ -52,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-   border-color: #099f9f; 
+  border-color: #099f9f;
 }
 
 .toggle-button {
@@ -63,6 +59,7 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* Sections */
 section {
   padding: 2rem;
   max-width: 1000px;
@@ -75,7 +72,7 @@ section {
   border-bottom: 2px solid #0bb4ac;
 }
 
-/* Floating Skill Boxes */
+/* Skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -90,7 +87,7 @@ section {
   padding: 0.75rem 1.25rem;
   border-radius: 10px;
   box-shadow: 0 0 8px #00040866;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .skills-list li:hover {
@@ -98,7 +95,7 @@ section {
   box-shadow: 0 0 16px #067296aa;
 }
 
-/* Floating Project Cards */
+/* Projects */
 #projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -111,7 +108,7 @@ section {
   border: 2px solid #056287;
   border-radius: 15px;
   box-shadow: 0 0 10px #bb00ff33;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .project:hover {
@@ -119,7 +116,34 @@ section {
   box-shadow: 0 0 20px #0aa1c3aa;
 }
 
-/* External Links Floating Boxes */
+/* EXPERIENCE SECTION */
+#experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.experience-entry {
+  background: #111;
+  padding: 1.5rem;
+  border: 2px solid #087ba1;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #bb00ff33;
+  transition: 0.3s;
+}
+
+.experience-entry:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #bb00ffaa;
+}
+
+.experience-entry h3 {
+  margin-bottom: 0.5rem;
+  color: #0ebcd3;
+}
+
+/* External Links */
 #external-links {
   text-align: center;
   padding: 2rem;
@@ -141,67 +165,16 @@ section {
   padding: 1.2rem 2rem;
   border-radius: 15px;
   box-shadow: 0 0 10px #bb00ff55;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   font-size: 1.1rem;
 }
 
-.external-box i {
-  font-size: 1.5rem;
-  color: #15b5c7;
-}
-
 .external-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 20px #0bbc92aa;
-  color: #fff;
-}
-
-/* Work Experience Floating Cards */
-#experience {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.experience-entry {
-  background: #111;
-  padding: 1.5rem;
-  border: 2px solid #087ba1;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #bb00ff33;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-entry:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #bb00ffaa;
-}
-
-.experience-entry h3{
-  margin-bottom: 0.5rem;
-  color: #0ebcd3;
-}
-
-/* Light Theme Overrides for Floating Cards */
-body.light-theme .project,
-body.light-theme .experience-entry,
-body.light-theme .external-box,
-body.light-theme .skills-list li {
-  background: #fff;
-  color: #000;
-  border-color: #0a9a90;
-  box-shadow: 0 0 10px #bb00ff44;
-}
-
-body.light-theme .external-box i,
-body.light-theme .experience-entry h3,
-body.light-theme .project h3 {
-  color: #088f9b;
 }
 
 /* Contact Form */
@@ -214,13 +187,6 @@ form textarea {
   color: #fff;
   border: 1px solid #06938a;
   border-radius: 5px;
-}
-
-body.light-theme form input,
-body.light-theme form textarea {
-  background: #fff;
-  color: #000;
-  border: 1px solid #0aa888;
 }
 
 form button {
@@ -236,6 +202,7 @@ form button:hover {
   background: #03a892;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
