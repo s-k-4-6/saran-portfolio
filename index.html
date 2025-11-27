@@ -117,5 +117,76 @@
         <li>
           <strong>WordPress Webpage Development:</strong><br>
           Designed and developed a responsive WordPress website using Gutenberg block editor
-          with interactive layouts, tab navigation, image
+          with interactive layouts, tab navigation, image transitions, and custom plugins.
+        </li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- External Links -->
+  <section id="external-links">
+    <h2>External Links</h2>
+
+    <div class="external-link-boxes">
+
+      <a href="https://github.com/S-k-46" target="_blank" class="external-box">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sarankarthik46/" target="_blank" class="external-box">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sarankarthikparthipan@gmail.com" target="_blank" class="external-box">
+        <i class="fas fa-envelope"></i>
+        <span>GMAIL</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2025 Saran Karthik — Crafting code with creativity, building solutions with soul
+      <i class="fas fa-rocket"></i>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Contact Form
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thanks for your message, SARAN KARTHIK!");
+    });
+
+    // Theme Toggle
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      const icon = toggleButton.querySelector("i");
+      icon.classList.toggle("fa-moon");
+      icon.classList.toggle("fa-sun");
+    });
+  </script>
+
+  <script src="https://kit.fontawesome.com/6b6913485f.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
