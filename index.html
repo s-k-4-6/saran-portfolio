@@ -1,384 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saran Karthik PS - Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-
-    <style>
-        :root {
-            --color-primary: #25ab75;
-            --color-primary-dark: #208c61;
-            --color-bg-primary: #DCDCDC;
-            --color-bg-secondary: #242424;
-            --color-bg-footer: #151515;
-            --color-white: #ffffff;
-            --color-text: #676767;
-            --color-border: #373737;
-
-            --ff-body: "Space Grotesk", sans-serif;
-
-            --fs-sm: 1.4rem;
-            --fs-md: 1.6rem;
-            --fs-lg: 2rem;
-            --fs-xl: 2.4rem;
-            --fs-xxl: 3.2rem;
-            --fs-biggest: clamp(3rem, 8vw, 5rem);
-
-            --fw-regular: 400;
-            --fw-medium: 500;
-            --fw-semibold: 600;
-            --fw-bold: 700;
-
-            --zindex-menu: 1000;
-
-            --transition: 0.4s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--color-bg-primary);
-            font-family: var(--ff-body);
-            font-size: var(--fs-md);
-            margin-top: 10rem;
-        }
-
-        h1, h2, h3, h4 {
-            color: var(--color-bg-footer);
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section {
-            padding: 5rem 0;
-        }
-
-        .section__header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section__title {
-            font-size: var(--fs-xl);
-        }
-
-        .section__subtitle {
-            color: var(--color-primary);
-            font-weight: var(--fw-semibold);
-        }
-
-        /* Header Navigation */
-        .header {
-            background: var(--color-bg-primary);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 10rem;
-            display: flex;
-            align-items: center;
-            z-index: var(--zindex-menu);
-            transition: var(--transition);
-        }
-
-        .header--scroll {
-            height: 8rem;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav__brand {
-            color: var(--color-primary);
-            font-size: var(--fs-lg);
-            font-weight: var(--fw-bold);
-            text-decoration: none;
-        }
-
-        .nav__list {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-
-        .nav__link {
-            text-decoration: none;
-            color: var(--color-bg-footer);
-            font-weight: var(--fw-medium);
-        }
-
-        .nav__link:hover {
-            color: var(--color-primary);
-        }
-
-        /* HERO */
-        .hero__wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            min-height: 70vh;
-        }
-
-        .hero__title {
-            font-size: var(--fs-biggest);
-        }
-
-        .hero__description {
-            margin-top: 1rem;
-            color: var(--color-text);
-        }
-
-        /* About */
-        .about__content p {
-            margin-top: 2rem;
-            color: #333;
-            line-height: 1.8;
-        }
-
-        /* Cards Sections */
-        .card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .d-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--color-bg-footer);
-            padding: 3rem 0;
-            color: var(--color-white);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SARAN KARTHIK PS - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <header>
+    <nav>
+      <h1>SARAN KARTHIK PS</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="toggle-button"><i class="fas fa-moon"></i></button>
+    </nav>
+  </header>
 
-    <!-- HEADER -->
-    <header id="header" class="header">
-        <div class="container">
-            <nav class="nav">
-                <a class="nav__brand" href="#">
-                    <i class="ri-code-s-slash-line"></i> Saran
-                </a>
+  <section id="hero">
+    <h2>I'm SARAN KARTHIK PS</h2>
+    <p>Fresher | PYTHON Developer | DATA ANALYTICS</p>
+  </section>
 
-                <ul class="nav__list">
-                    <li><a href="#hero" class="nav__link">Home</a></li>
-                    <li><a href="#about" class="nav__link">About</a></li>
-                    <li><a href="#education" class="nav__link">Education</a></li>
-                    <li><a href="#skills" class="nav__link">Skills</a></li>
-                    <li><a href="#internship" class="nav__link">Internship</a></li>
-                    <li><a href="#projects" class="nav__link">Projects</a></li>
-                    <li><a href="#certifications" class="nav__link">Certifications</a></li>
-                    <li><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a recent graduate with hands-on experience in Python, Web Development (HTML, CSS, JavaScript), SQL, SDLC,
+      Power BI and Data Analytics. I am passionate about building solutions that solve real-world problems and eager to
+      contribute to impactful projects in tech.
+    </p>
+  </section>
 
-    <!-- HERO -->
-    <section id="hero" class="section hero">
-        <div class="container">
-            <div class="hero__wrapper">
-                <div>
-                    <h1 class="hero__title">Hi, I am Saran,<br>Software Developer</h1>
-                    <p class="hero__description">Aspiring Associate Software Engineer skilled in Python, Django, SDLC & Agile.</p>
-                </div>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>PYTHON</li>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>CORE JAVA</li>
+      <li>POWER BI</li>
+      <li>SQL</li>
+      <li>DATA ANALYTICS</li>
+      <li>SDLC</li>
+    </ul>
+  </section>
 
-                <img src="assets/img/hero1.jpeg" alt="">
-            </div>
-        </div>
-    </section>
+  <section id="projects">
+    <h1>Projects</h1>
 
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">Who I Am</span>
-            </div>
+    <div class="project">
+      <h3><i class="fas fa-shield-alt"></i> Role Of Explainable AI in Health Care</h3>
+      <p>Created a Web Application that predicts the disease based on the given input using AI.</p>
+      <p><strong>Tech Stack:</strong> Java, HTML, CSS, JavaScript, SQL</p>
+    </div>
 
-            <div class="about__content card">
-                <p>
-                    Aspiring Associate Software Engineer with strong skills in Python Full Stack Development including Django, SQL, HTML, and CSS.  
-                    Trained in Agile methodologies, SDLC, and passionate about creating scalable, high-quality applications.
-                </p>
-            </div>
-        </div>
-    </section>
+    <div class="project">
+      <h3><i class="fas fa-cloud"></i> Data Leakage Detection Using Cloud Computing</h3>
+      <p>Created a cloud-based data leakage detection system using encryption, access controls, machine learning, and audits.</p>
+      <p><strong>Tech Stack:</strong> Python, SQL</p>
+    </div>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Education</h2>
-            </div>
+  </section>
 
-            <div class="d-grid">
-                <div class="card">
-                    <h3>B.E. CSE – Panimalar Institute of Technology</h3>
-                    <p>GPA: 7.89 (2020–2024)</p>
-                </div>
+  <section id="experience">
+    <h1>Work Experience</h1>
 
-                <div class="card">
-                    <h3>Higher Secondary – Sri Sankara Vidyalaya MHSS</h3>
-                    <p>2019–2020</p>
-                </div>
+    <!-- Experience 1 -->
+    <div class="experience-entry">
+      <h3><i class="fas fa-laptop-code"></i> Cloud Computing Intern – DLK Technologies</h3>
+      <p><strong>Duration:</strong> Aug 2022 </p>
+      <p>Gained foundational experience with cloud computing concepts and AWS services. Explored basics of EC2, S3, IAM, and cloud deployment practices.</p>
+    </div>
 
-                <div class="card">
-                    <h3>SSLC – Sri Sankara Vidyalaya MHSS</h3>
-                    <p>2017–2018</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Experience 2 - NEW INTERNSHIP -->
+    <div class="experience-entry">
+      <h3><i class="fas fa-robot"></i> Internship – RAAGAA Value Add Technologies Pvt Ltd, Chennai</h3>
+      <p><strong>Duration:</strong> July 2025 – Oct 2025</p>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Technical Skills</h2>
-            </div>
+      <ul style="margin-left: 1rem; margin-top: 0.5rem;">
+        <li><strong>Badminton Membership Chatbot (AI Integration):</strong><br>
+            Developed an AI-powered membership chatbot using HTML, CSS, OpenAI API with GPay integration,
+            email confirmation, and MySQL chat storage.</li><br>
 
-            <div class="d-grid">
-                <div class="card"><h3>Python</h3></div>
-                <div class="card"><h3>Django</h3></div>
-                <div class="card"><h3>HTML & CSS</h3></div>
-                <div class="card"><h3>SQL</h3></div>
-                <div class="card"><h3>SDLC & Agile</h3></div>
-                <div class="card"><h3>Soft Skills: Teamwork, Time Management, Problem Solving</h3></div>
-            </div>
-        </div>
-    </section>
+        <li><strong>Pickleball Object Detection System (YOLOv11):</strong><br>
+            Built a YOLOv11-based object detection system to track pickleball bat, ball, and players with real-time analytics and annotated exports.</li><br>
 
-    <!-- INTERNSHIP -->
-    <section id="internship" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Internship Experience</h2>
-            </div>
+        <li><strong>WordPress Webpage Development:</strong><br>
+            Designed and developed a responsive WordPress website using Gutenberg block editor with interactive layouts, tab navigation, image transitions, and custom plugins.</li>
+      </ul>
+    </div>
+  </section>
 
-            <div class="d-grid">
-                <div class="card">
-                    <h3>RAAGAA Value Add Technologies Pvt Ltd (July–Oct 2025)</h3>
-                    <p>Developed an AI-powered Badminton Membership Chatbot with GPay integration, email confirmation, and MySQL chat storage.</p>
-                </div>
+  <section id="external-links">
+    <h2>External Links</h2>
+    <div class="external-link-boxes">
+      <a href="https://github.com/S-k-46" target="_blank" class="external-box">
+        <i class="fab fa-github"></i><span>GitHub</span>
+      </a>
 
-                <div class="card">
-                    <h3>Pickleball Object Detection – YOLOv11</h3>
-                    <p>Built a real-time detection system for bat, ball & players with analytics and annotated video export.</p>
-                </div>
+      <a href="https://www.linkedin.com/in/sarankarthik46/" target="_blank" class="external-box">
+        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+      </a>
 
-                <div class="card">
-                    <h3>WordPress Development</h3>
-                    <p>Designed responsive UI with Gutenberg blocks, plugins, and animations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sarankarthikparthipan@gmail.com" target="_blank" class="external-box">
+        <i class="fa-solid fa-envelope"></i><span>GMAIL</span>
+      </a>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Projects</h2>
-            </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-            <div class="d-grid">
-                <div class="card">
-                    <h3>Explainable AI in Healthcare</h3>
-                    <p>Used XAI models for transparency and better decision-making in healthcare.</p>
-                </div>
+  <footer>
+    <p>© 2025 Saran Karthik — Crafting code with creativity, building solutions with soul <i class="fa fas fa-rocket"></i> </p>
+  </footer>
 
-                <div class="card">
-                    <h3>Data Leakage Detection Using Cloud</h3>
-                    <p>Developed a secure monitoring system reducing unauthorized access by 40%.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thanks for your message, SARAN KARTHIK!");
+    });
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Certifications</h2>
-            </div>
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      const icon = toggleButton.querySelector("i");
+      icon.classList.toggle("fa-moon");
+      icon.classList.toggle("fa-sun");
+    });
+  </script>
 
-            <div class="d-grid">
-                <div class="card"><h3>Python Full Stack – Qspiders (2024)</h3></div>
-                <div class="card"><h3>Power BI – Skill Nation (2024)</h3></div>
-                <div class="card"><h3>Cloud Computing – DLK Tech (2022)</h3></div>
-                <div class="card"><h3>Java Development – Greens Tech (2023)</h3></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Contact</h2>
-            </div>
-
-            <div class="card">
-                <h3>Name: SARAN KARTHIK PS</h3>
-                <p>Email: sarankarthikparthipan@gmail.com</p>
-                <p>Mobile: +91 9840182516</p>
-                <p>LinkedIn: linkedin.com/in/sarankarthik46</p>
-                <p>GitHub: s-k-46</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 | Designed by Saran Karthik PS</p>
-        </div>
-    </footer>
-
-    <script>
-        // Header Scroll
-        const header = document.getElementById("header");
-        window.addEventListener("scroll", () => {
-            header.classList.toggle("header--scroll", window.scrollY > 40);
-        });
-    </script>
-
+  <script src="https://kit.fontawesome.com/6b6913485f.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
