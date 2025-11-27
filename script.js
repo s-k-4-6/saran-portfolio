@@ -1,13 +1,25 @@
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thanks for your message, SARAN KARTHIK !");
+const navMenu = document.getElementById("nav-menu");
+const navToggle = document.getElementById("nav-toggle");
+const navItem = document.querySelectorAll(".nav__item");
+const header = document.getElementById("header");
+
+// Open/Close menu
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("nav__menu--open");
 });
 
-const toggleButton = document.getElementById("theme-toggle");
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("light-theme");
-  const icon = toggleButton.querySelector("i");
-  icon.classList.toggle("fa-moon");
-  icon.classList.toggle("fa-sun");
+// Close menu on click
+navItem.forEach(item => {
+  item.addEventListener("click", () => {
+    navMenu.classList.remove("nav__menu--open");
+  });
 });
 
+// Header scroll effect
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    header.classList.add("header--scroll");
+  } else {
+    header.classList.remove("header--scroll");
+  }
+});
