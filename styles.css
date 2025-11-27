@@ -1,36 +1,45 @@
-/* ===== ROOT COLORS & FONTS ===== */
+/* =========================================================
+   GLOBAL COLORS & FONTS
+========================================================= */
 :root {
     --primary: #25ab75;
-    --dark: #151515;
-    --light: #DCDCDC;
+    --dark: #1a1a1a;
+    --light: #f5f5f5;
+    --white: #ffffff;
+    --text: #444;
 
     --font: "Space Grotesk", sans-serif;
 
-    --transition: 0.3s ease;
+    --radius: 12px;
+    --transition: 0.3s ease-in-out;
 }
 
-/* ===== GLOBAL STYLE ===== */
+/* =========================================================
+   RESET
+========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font);
     background: var(--light);
-    color: #222;
+    color: var(--text);
     line-height: 1.7;
 }
 
-img {
-    max-width: 100%;
-}
-
-/* ===== REUSABLE ===== */
+/* =========================================================
+   REUSABLE CLASSES
+========================================================= */
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -39,16 +48,32 @@ img {
 }
 
 .section__title {
+    font-size: 2.4rem;
     text-align: center;
-    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--dark);
 }
 
 .section__subtitle {
     text-align: center;
-    display: block;
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     color: var(--primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .grid {
@@ -56,28 +81,34 @@ img {
     gap: 2rem;
 }
 
-.card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-/* ===== HEADER ===== */
+/* =========================================================
+   HEADER
+========================================================= */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 1.2rem 0;
     background: var(--light);
-    padding: 1rem 0;
     z-index: 100;
     transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .header.scroll {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: var(--white);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* =========================================================
+   NAVIGATION BAR
+========================================================= */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -86,15 +117,14 @@ img {
 
 .nav__brand {
     font-size: 1.8rem;
+    font-weight: 700;
     text-decoration: none;
     color: var(--primary);
-    font-weight: 700;
 }
 
-/* MENU */
 .nav__list {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 2rem;
 }
 
@@ -114,50 +144,80 @@ img {
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    color: var(--dark);
 }
 
-/* ===== HERO ===== */
+/* =========================================================
+   HERO SECTION
+========================================================= */
 .hero {
     margin-top: 8rem;
 }
 
 .hero__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .hero__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .hero__content h1 {
     font-size: 3rem;
     color: var(--dark);
+    line-height: 1.2;
 }
 
 .hero__content p {
     margin-top: 1rem;
-    color: #555;
+    font-size: 1.2rem;
 }
 
-/* ===== FOOTER ===== */
+.hero__img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+.contact .card p {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
 .footer {
-    text-align: center;
-    padding: 2rem 0;
     background: var(--dark);
-    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--white);
+    font-size: 1rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
 @media (max-width: 768px) {
     .nav__list {
         position: absolute;
         top: 80px;
         right: 0;
-        background: #fff;
+        background: var(--white);
         flex-direction: column;
-        gap: 1.5rem;
+        width: 220px;
         padding: 1.5rem;
-        width: 200px;
+        gap: 1.5rem;
+        border-radius: var(--radius);
         display: none;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     .nav__list.open {
