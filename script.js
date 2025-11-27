@@ -1,12 +1,18 @@
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thanks for your message, SARAN KARTHIK !");
+/* ===== NAVBAR SCROLL EFFECT ===== */
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+        header.classList.add("scroll");
+    } else {
+        header.classList.remove("scroll");
+    }
 });
 
-const toggleButton = document.getElementById("theme-toggle");
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("light-theme");
-  const icon = toggleButton.querySelector("i");
-  icon.classList.toggle("fa-moon");
-  icon.classList.toggle("fa-sun");
+/* ===== MOBILE MENU ===== */
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 });
+
