@@ -1,211 +1,175 @@
-/* Global Styles */
+/* ===== ROOT COLORS & FONTS ===== */
+:root {
+    --primary: #25ab75;
+    --dark: #151515;
+    --light: #DCDCDC;
+
+    --font: "Space Grotesk", sans-serif;
+
+    --transition: 0.3s ease;
+}
+
+/* ===== GLOBAL STYLE ===== */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
-  color: #eae0e0;
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+    font-family: var(--font);
+    background: var(--light);
+    color: #222;
+    line-height: 1.7;
 }
 
-body.light-theme {
-  background-color: #fff;
-  color: #000;
+img {
+    max-width: 100%;
 }
 
-/* HEADER */
-header {
-  background: #111;
-  padding: 1rem;
-  border-bottom: 2px solid #1194c0;
+/* ===== REUSABLE ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.section {
+    padding: 5rem 0;
 }
 
-nav h1 {
-  color: #1b81ca;
+.section__title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--dark);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+.section__subtitle {
+    text-align: center;
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--primary);
 }
 
-nav a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
+.grid {
+    display: grid;
+    gap: 2rem;
 }
 
-nav a:hover {
-  border-color: #099f9f;
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
 }
 
-.toggle-button {
-  background: none;
-  border: none;
-  color: #f0faf8;
-  font-size: 1.2rem;
-  cursor: pointer;
+/* ===== HEADER ===== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--light);
+    padding: 1rem 0;
+    z-index: 100;
+    transition: var(--transition);
 }
 
-/* Sections */
-section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+.header.scroll {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-#hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  border-bottom: 2px solid #0bb4ac;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Skills */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  list-style: none;
-  padding: 1rem 0;
+.nav__brand {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
 }
 
-.skills-list li {
-  background: #111;
-  border: 2px solid #00fffb;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  box-shadow: 0 0 8px #00040866;
-  transition: 0.3s;
+/* MENU */
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.skills-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 16px #067296aa;
+.nav__link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--dark);
+    transition: var(--transition);
 }
 
-/* Projects */
-#projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+.nav__link:hover {
+    color: var(--primary);
 }
 
-.project {
-  background: #111;
-  padding: 1.5rem;
-  border: 2px solid #056287;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #bb00ff33;
-  transition: 0.3s;
+/* MOBILE MENU */
+.nav__toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
-.project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #0aa1c3aa;
+/* ===== HERO ===== */
+.hero {
+    margin-top: 8rem;
 }
 
-/* EXPERIENCE SECTION */
-#experience {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.hero__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-.experience-entry {
-  background: #111;
-  padding: 1.5rem;
-  border: 2px solid #087ba1;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #bb00ff33;
-  transition: 0.3s;
+.hero__content h1 {
+    font-size: 3rem;
+    color: var(--dark);
 }
 
-.experience-entry:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #bb00ffaa;
+.hero__content p {
+    margin-top: 1rem;
+    color: #555;
 }
 
-.experience-entry h3 {
-  margin-bottom: 0.5rem;
-  color: #0ebcd3;
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--dark);
+    color: #fff;
 }
 
-/* External Links */
-#external-links {
-  text-align: center;
-  padding: 2rem;
-}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav__list {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        width: 200px;
+        display: none;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
 
-.external-link-boxes {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
+    .nav__list.open {
+        display: flex;
+    }
 
-.external-box {
-  background: #111;
-  border: 2px solid #02719d;
-  color: #fff;
-  text-decoration: none;
-  padding: 1.2rem 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #bb00ff55;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1.1rem;
-}
+    .nav__toggle {
+        display: block;
+    }
 
-.external-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #0bbc92aa;
-}
-
-/* Contact Form */
-form input,
-form textarea {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  background: #111;
-  color: #fff;
-  border: 1px solid #06938a;
-  border-radius: 5px;
-}
-
-form button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  background: #04a7b9;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #03a892;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #111;
-  border-top: 2px solid #0769b9;
+    .hero__wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
