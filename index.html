@@ -3,238 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saran Karthik PS - Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
+    <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-
-    <style>
-        :root {
-            --color-primary: #25ab75;
-            --color-primary-dark: #208c61;
-            --color-bg-primary: #DCDCDC;
-            --color-bg-secondary: #242424;
-            --color-bg-footer: #151515;
-            --color-white: #ffffff;
-            --color-text: #676767;
-            --color-border: #373737;
-
-            --ff-body: "Space Grotesk", sans-serif;
-
-            --fs-sm: 1.4rem;
-            --fs-md: 1.6rem;
-            --fs-lg: 2rem;
-            --fs-xl: 2.4rem;
-            --fs-xxl: 3.2rem;
-            --fs-biggest: clamp(3rem, 8vw, 5rem);
-
-            --fw-regular: 400;
-            --fw-medium: 500;
-            --fw-semibold: 600;
-            --fw-bold: 700;
-
-            --zindex-menu: 1000;
-
-            --transition: 0.4s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--color-bg-primary);
-            font-family: var(--ff-body);
-            font-size: var(--fs-md);
-            margin-top: 10rem;
-        }
-
-        h1, h2, h3, h4 {
-            color: var(--color-bg-footer);
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section {
-            padding: 5rem 0;
-        }
-
-        .section__header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section__title {
-            font-size: var(--fs-xl);
-        }
-
-        .section__subtitle {
-            color: var(--color-primary);
-            font-weight: var(--fw-semibold);
-        }
-
-        /* Header Navigation */
-        .header {
-            background: var(--color-bg-primary);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 10rem;
-            display: flex;
-            align-items: center;
-            z-index: var(--zindex-menu);
-            transition: var(--transition);
-        }
-
-        .header--scroll {
-            height: 8rem;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav__brand {
-            color: var(--color-primary);
-            font-size: var(--fs-lg);
-            font-weight: var(--fw-bold);
-            text-decoration: none;
-        }
-
-        .nav__list {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-
-        .nav__link {
-            text-decoration: none;
-            color: var(--color-bg-footer);
-            font-weight: var(--fw-medium);
-        }
-
-        .nav__link:hover {
-            color: var(--color-primary);
-        }
-
-        /* HERO */
-        .hero__wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            min-height: 70vh;
-        }
-
-        .hero__title {
-            font-size: var(--fs-biggest);
-        }
-
-        .hero__description {
-            margin-top: 1rem;
-            color: var(--color-text);
-        }
-
-        /* About */
-        .about__content p {
-            margin-top: 2rem;
-            color: #333;
-            line-height: 1.8;
-        }
-
-        /* Cards Sections */
-        .card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .d-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--color-bg-footer);
-            padding: 3rem 0;
-            color: var(--color-white);
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header id="header" class="header">
-        <div class="container">
-            <nav class="nav">
-                <a class="nav__brand" href="#">
-                    <i class="ri-code-s-slash-line"></i> Saran
-                </a>
+        <div class="container nav">
+            <a href="#" class="nav__brand">
+                <i class="ri-code-s-slash-line"></i> Saran
+            </a>
 
-                <ul class="nav__list">
-                    <li><a href="#hero" class="nav__link">Home</a></li>
-                    <li><a href="#about" class="nav__link">About</a></li>
-                    <li><a href="#education" class="nav__link">Education</a></li>
-                    <li><a href="#skills" class="nav__link">Skills</a></li>
-                    <li><a href="#internship" class="nav__link">Internship</a></li>
-                    <li><a href="#projects" class="nav__link">Projects</a></li>
-                    <li><a href="#certifications" class="nav__link">Certifications</a></li>
-                    <li><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
+            <ul class="nav__list" id="nav-menu">
+                <li><a href="#hero" class="nav__link">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#education" class="nav__link">Education</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#internship" class="nav__link">Internship</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#certifications" class="nav__link">Certifications</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section id="hero" class="section hero">
-        <div class="container">
-            <div class="hero__wrapper">
-                <div>
-                    <h1 class="hero__title">Hi, I am Saran,<br>Software Developer</h1>
-                    <p class="hero__description">Aspiring Associate Software Engineer skilled in Python, Django, SDLC & Agile.</p>
-                </div>
-
-                <img src="assets/img/hero1.jpeg" alt="">
+        <div class="container hero__wrapper">
+            <div class="hero__content">
+                <h1>Hi, I am Saran,<br>Software Developer</h1>
+                <p>Aspiring Associate Software Engineer skilled in Python, Django, SQL, SDLC & Agile.</p>
             </div>
+            <img src="assets/img/hero1.jpeg" class="hero__img">
         </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section about">
+    <section id="about" class="section">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">Who I Am</span>
-            </div>
+            <h2 class="section__title">About Me</h2>
+            <p class="section__subtitle">Who I Am</p>
 
-            <div class="about__content card">
+            <div class="card">
                 <p>
-                    Aspiring Associate Software Engineer with strong skills in Python Full Stack Development including Django, SQL, HTML, and CSS.  
-                    Trained in Agile methodologies, SDLC, and passionate about creating scalable, high-quality applications.
+                    Aspiring Associate Software Engineer with strong skills in Python, Django, SQL, HTML, and CSS.  
+                    Trained in SDLC, Agile, and passionate about building high-quality, scalable applications.
                 </p>
             </div>
         </div>
@@ -243,21 +71,17 @@
     <!-- EDUCATION -->
     <section id="education" class="section">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Education</h2>
-            </div>
+            <h2 class="section__title">Education</h2>
 
-            <div class="d-grid">
+            <div class="grid">
                 <div class="card">
                     <h3>B.E. CSE – Panimalar Institute of Technology</h3>
                     <p>GPA: 7.89 (2020–2024)</p>
                 </div>
-
                 <div class="card">
                     <h3>Higher Secondary – Sri Sankara Vidyalaya MHSS</h3>
                     <p>2019–2020</p>
                 </div>
-
                 <div class="card">
                     <h3>SSLC – Sri Sankara Vidyalaya MHSS</h3>
                     <p>2017–2018</p>
@@ -269,17 +93,15 @@
     <!-- SKILLS -->
     <section id="skills" class="section">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Technical Skills</h2>
-            </div>
+            <h2 class="section__title">Technical Skills</h2>
 
-            <div class="d-grid">
+            <div class="grid">
                 <div class="card"><h3>Python</h3></div>
                 <div class="card"><h3>Django</h3></div>
                 <div class="card"><h3>HTML & CSS</h3></div>
                 <div class="card"><h3>SQL</h3></div>
                 <div class="card"><h3>SDLC & Agile</h3></div>
-                <div class="card"><h3>Soft Skills: Teamwork, Time Management, Problem Solving</h3></div>
+                <div class="card"><h3>Teamwork, Problem Solving</h3></div>
             </div>
         </div>
     </section>
@@ -287,24 +109,22 @@
     <!-- INTERNSHIP -->
     <section id="internship" class="section">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Internship Experience</h2>
-            </div>
+            <h2 class="section__title">Internship Experience</h2>
 
-            <div class="d-grid">
+            <div class="grid">
                 <div class="card">
-                    <h3>RAAGAA Value Add Technologies Pvt Ltd (July–Oct 2025)</h3>
-                    <p>Developed an AI-powered Badminton Membership Chatbot with GPay integration, email confirmation, and MySQL chat storage.</p>
+                    <h3>RAAGAA Value Add Technologies Pvt Ltd (2025)</h3>
+                    <p>Developed an AI-powered badminton membership chatbot with GPay, email confirmation & MySQL storage.</p>
                 </div>
 
                 <div class="card">
                     <h3>Pickleball Object Detection – YOLOv11</h3>
-                    <p>Built a real-time detection system for bat, ball & players with analytics and annotated video export.</p>
+                    <p>Real-time bat, ball & player detection system with analytics.</p>
                 </div>
 
                 <div class="card">
-                    <h3>WordPress Development</h3>
-                    <p>Designed responsive UI with Gutenberg blocks, plugins, and animations.</p>
+                    <h3>WordPress Web Development</h3>
+                    <p>Built responsive sites using Gutenberg blocks & custom plugins.</p>
                 </div>
             </div>
         </div>
@@ -313,19 +133,17 @@
     <!-- PROJECTS -->
     <section id="projects" class="section">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Projects</h2>
-            </div>
+            <h2 class="section__title">Projects</h2>
 
-            <div class="d-grid">
+            <div class="grid">
                 <div class="card">
                     <h3>Explainable AI in Healthcare</h3>
-                    <p>Used XAI models for transparency and better decision-making in healthcare.</p>
+                    <p>Used XAI to enhance medical decision-making & transparency.</p>
                 </div>
 
                 <div class="card">
                     <h3>Data Leakage Detection Using Cloud</h3>
-                    <p>Developed a secure monitoring system reducing unauthorized access by 40%.</p>
+                    <p>Created a system to detect unauthorized data access (40% reduction).</p>
                 </div>
             </div>
         </div>
@@ -334,15 +152,13 @@
     <!-- CERTIFICATIONS -->
     <section id="certifications" class="section">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Certifications</h2>
-            </div>
+            <h2 class="section__title">Certifications</h2>
 
-            <div class="d-grid">
-                <div class="card"><h3>Python Full Stack – Qspiders (2024)</h3></div>
-                <div class="card"><h3>Power BI – Skill Nation (2024)</h3></div>
-                <div class="card"><h3>Cloud Computing – DLK Tech (2022)</h3></div>
-                <div class="card"><h3>Java Development – Greens Tech (2023)</h3></div>
+            <div class="grid">
+                <div class="card">Python Full Stack – Qspiders</div>
+                <div class="card">Power BI – Skill Nation</div>
+                <div class="card">Cloud Computing – DLK Tech</div>
+                <div class="card">Java Development – Greens Tech</div>
             </div>
         </div>
     </section>
@@ -350,35 +166,24 @@
     <!-- CONTACT -->
     <section id="contact" class="section contact">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Contact</h2>
-            </div>
+            <h2 class="section__title">Contact</h2>
 
             <div class="card">
-                <h3>Name: SARAN KARTHIK PS</h3>
-                <p>Email: sarankarthikparthipan@gmail.com</p>
-                <p>Mobile: +91 9840182516</p>
-                <p>LinkedIn: linkedin.com/in/sarankarthik46</p>
-                <p>GitHub: s-k-46</p>
+                <p><strong>Name:</strong> Saran Karthik PS</p>
+                <p><strong>Email:</strong> sarankarthikparthipan@gmail.com</p>
+                <p><strong>Mobile:</strong> +91 9840182516</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/sarankarthik46</p>
+                <p><strong>GitHub:</strong> s-k-46</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2025 | Designed by Saran Karthik PS</p>
-        </div>
+        <p>© 2025 | Designed by Saran Karthik PS</p>
     </footer>
 
-    <script>
-        // Header Scroll
-        const header = document.getElementById("header");
-        window.addEventListener("scroll", () => {
-            header.classList.toggle("header--scroll", window.scrollY > 40);
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
