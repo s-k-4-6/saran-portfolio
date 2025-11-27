@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SARAN KARTHIK PS - Portfolio</title>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+
+  <!-- Header -->
   <header>
     <nav>
       <h1>SARAN KARTHIK PS</h1>
@@ -19,26 +26,33 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="toggle-button"><i class="fas fa-moon"></i></button>
+
+      <button id="theme-toggle" class="toggle-button">
+        <i class="fas fa-moon"></i>
+      </button>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section id="hero">
     <h2>I'm SARAN KARTHIK PS</h2>
     <p>Fresher | PYTHON Developer | DATA ANALYTICS</p>
   </section>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I’m a recent graduate with hands-on experience in Python, Web Development (HTML, CSS, JavaScript), SQL, SDLC,
-      Power BI and Data Analytics. I am passionate about building solutions that solve real-world problems and eager to
-      contribute to impactful projects in tech.
+      I’m a recent graduate with hands-on experience in Python, Web Development (HTML, CSS, JavaScript),
+      SQL, SDLC, Power BI and Data Analytics. I am passionate about building solutions that solve
+      real-world problems and eager to contribute to impactful projects in tech.
     </p>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
+
     <ul class="skills-list">
       <li>PYTHON</li>
       <li>HTML & CSS</li>
@@ -51,6 +65,7 @@
     </ul>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h1>Projects</h1>
 
@@ -65,84 +80,42 @@
       <p>Created a cloud-based data leakage detection system using encryption, access controls, machine learning, and audits.</p>
       <p><strong>Tech Stack:</strong> Python, SQL</p>
     </div>
-
   </section>
 
+  <!-- Experience Section -->
   <section id="experience">
     <h1>Work Experience</h1>
 
     <!-- Experience 1 -->
     <div class="experience-entry">
       <h3><i class="fas fa-laptop-code"></i> Cloud Computing Intern – DLK Technologies</h3>
-      <p><strong>Duration:</strong> Aug 2022 </p>
-      <p>Gained foundational experience with cloud computing concepts and AWS services. Explored basics of EC2, S3, IAM, and cloud deployment practices.</p>
+      <p><strong>Duration:</strong> Aug 2022</p>
+      <p>
+        Gained foundational experience with cloud computing concepts and AWS services.
+        Explored basics of EC2, S3, IAM, and cloud deployment practices.
+      </p>
     </div>
 
-    <!-- Experience 2 - NEW INTERNSHIP -->
+    <!-- Experience 2 -->
     <div class="experience-entry">
       <h3><i class="fas fa-robot"></i> Internship – RAAGAA Value Add Technologies Pvt Ltd, Chennai</h3>
       <p><strong>Duration:</strong> July 2025 – Oct 2025</p>
 
       <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-        <li><strong>Badminton Membership Chatbot (AI Integration):</strong><br>
-            Developed an AI-powered membership chatbot using HTML, CSS, OpenAI API with GPay integration,
-            email confirmation, and MySQL chat storage.</li><br>
+        <li>
+          <strong>Badminton Membership Chatbot (AI Integration):</strong><br>
+          Developed an AI-powered membership chatbot using HTML, CSS, OpenAI API with GPay
+          integration, email confirmation, and MySQL chat storage.
+        </li><br>
 
-        <li><strong>Pickleball Object Detection System (YOLOv11):</strong><br>
-            Built a YOLOv11-based object detection system to track pickleball bat, ball, and players with real-time analytics and annotated exports.</li><br>
+        <li>
+          <strong>Pickleball Object Detection System (YOLOv11):</strong><br>
+          Built a YOLOv11-based object detection system to track pickleball bat, ball,
+          and players with real-time analytics and annotated exports.
+        </li><br>
 
-        <li><strong>WordPress Webpage Development:</strong><br>
-            Designed and developed a responsive WordPress website using Gutenberg block editor with interactive layouts, tab navigation, image transitions, and custom plugins.</li>
-      </ul>
-    </div>
-  </section>
+        <li>
+          <strong>WordPress Webpage Development:</strong><br>
+          Designed and developed a responsive WordPress website using Gutenberg block editor
+          with interactive layouts, tab navigation, image
 
-  <section id="external-links">
-    <h2>External Links</h2>
-    <div class="external-link-boxes">
-      <a href="https://github.com/S-k-46" target="_blank" class="external-box">
-        <i class="fab fa-github"></i><span>GitHub</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/sarankarthik46/" target="_blank" class="external-box">
-        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
-      </a>
-
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sarankarthikparthipan@gmail.com" target="_blank" class="external-box">
-        <i class="fa-solid fa-envelope"></i><span>GMAIL</span>
-      </a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Saran Karthik — Crafting code with creativity, building solutions with soul <i class="fa fas fa-rocket"></i> </p>
-  </footer>
-
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thanks for your message, SARAN KARTHIK!");
-    });
-
-    const toggleButton = document.getElementById("theme-toggle");
-    toggleButton.addEventListener("click", () => {
-      document.body.classList.toggle("light-theme");
-      const icon = toggleButton.querySelector("i");
-      icon.classList.toggle("fa-moon");
-      icon.classList.toggle("fa-sun");
-    });
-  </script>
-
-  <script src="https://kit.fontawesome.com/6b6913485f.js" crossorigin="anonymous"></script>
-</body>
-</html>
